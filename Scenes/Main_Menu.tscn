@@ -1,0 +1,165 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://assets/buttons/NewGame_Hover.png" type="Texture" id=1]
+[ext_resource path="res://assets/buttons/NewGame_Press.png" type="Texture" id=2]
+[ext_resource path="res://assets/extra/Menu.png" type="Texture" id=3]
+[ext_resource path="res://assets/buttons/NewGame.png" type="Texture" id=4]
+[ext_resource path="res://assets/buttons/Options.png" type="Texture" id=5]
+[ext_resource path="res://assets/buttons/Quit.png" type="Texture" id=6]
+[ext_resource path="res://assets/buttons/Quit_Hover.png" type="Texture" id=7]
+[ext_resource path="res://assets/buttons/Continue.png" type="Texture" id=8]
+[ext_resource path="res://assets/buttons/Options_Hover.png" type="Texture" id=9]
+[ext_resource path="res://assets/buttons/Continue_Press.png" type="Texture" id=10]
+[ext_resource path="res://assets/buttons/Options_Press.png" type="Texture" id=11]
+[ext_resource path="res://assets/buttons/Continue_Hover.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttons/Quit_Press.png" type="Texture" id=13]
+[ext_resource path="res://assets/extra/note1.png" type="Texture" id=14]
+[ext_resource path="res://assets/extra/note2.png" type="Texture" id=15]
+[ext_resource path="res://assets/extra/note3.png" type="Texture" id=16]
+[ext_resource path="res://assets/soundtrack/MusicBox.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Scripts/Main_Menu.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/Transition_Scene.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/sounds/Button.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/buttons/Tutorial_Press.png" type="Texture" id=21]
+[ext_resource path="res://assets/buttons/Tutorial_Hover.png" type="Texture" id=22]
+[ext_resource path="res://assets/buttons/Tutorial.png" type="Texture" id=23]
+[ext_resource path="res://assets/buttons/Return_Hover.png" type="Texture" id=24]
+[ext_resource path="res://assets/buttons/Return.png" type="Texture" id=25]
+[ext_resource path="res://assets/extra/Tutorial.png" type="Texture" id=26]
+[ext_resource path="res://assets/buttons/Return_Pressed.png" type="Texture" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="Node" type="Node"]
+script = ExtResource( 18 )
+
+[node name="Background" type="NinePatchRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notes" type="AnimatedSprite" parent="Background"]
+position = Vector2( 630.508, 388.876 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
+
+[node name="NewGame" type="TextureButton" parent="Background"]
+margin_left = 1270.45
+margin_top = 368.111
+margin_right = 1830.45
+margin_bottom = 498.111
+hint_tooltip = "Start the game
+If there's already a Save File, it'll be deleted."
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="TextureButton" parent="Background"]
+margin_left = 1270.45
+margin_top = 513.468
+margin_right = 1830.45
+margin_bottom = 643.468
+hint_tooltip = "Continue your save
+If there's no Save File, a new one will be created"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="TextureButton" parent="Background"]
+margin_left = 1270.45
+margin_top = 656.937
+margin_right = 1830.45
+margin_bottom = 786.937
+hint_tooltip = "Configure the game"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="TextureButton" parent="Background"]
+margin_left = 1270.45
+margin_top = 815.507
+margin_right = 1830.45
+margin_bottom = 945.507
+hint_tooltip = "Exit to Desktop"
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="Background"]
+stream = ExtResource( 17 )
+autoplay = true
+
+[node name="Tutorial" type="TextureButton" parent="Background"]
+margin_left = 37.4178
+margin_top = 26.727
+margin_right = 165.418
+margin_bottom = 154.727
+mouse_default_cursor_shape = 16
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 21 )
+texture_hover = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay" type="ColorRect" parent="Background"]
+visible = false
+margin_left = -72.0
+margin_top = -59.0
+margin_right = 1983.0
+margin_bottom = 1142.0
+color = Color( 0.00392157, 0.00392157, 0.00392157, 0.839216 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tutorial2" type="Sprite" parent="Background/Overlay"]
+position = Vector2( 1031.66, 593.029 )
+texture = ExtResource( 26 )
+
+[node name="Return" type="TextureButton" parent="Background/Overlay"]
+margin_left = 1282.41
+margin_top = 804.833
+margin_right = 1582.41
+margin_bottom = 1104.83
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 27 )
+texture_hover = ExtResource( 24 )
+
+[node name="Transition_Scene" parent="." instance=ExtResource( 19 )]
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+[connection signal="pressed" from="Background/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Background/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="Background/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Background/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Background/Tutorial" to="." method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="Background/Overlay/Return" to="." method="_on_Return_pressed"]
+[connection signal="transitioned" from="Transition_Scene" to="." method="_on_Transition_Scene_transitioned"]

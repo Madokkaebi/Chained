@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Gouma.ogg-687965b19d28bc8ff89599fd5bfc1e69.oggstr"
+
+[deps]
+
+source_file="res://assets/soundtrack/Gouma.ogg"
+dest_files=[ "res://.import/Gouma.ogg-687965b19d28bc8ff89599fd5bfc1e69.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

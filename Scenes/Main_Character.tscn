@@ -1,0 +1,676 @@
+[gd_scene load_steps=68 format=2]
+
+[ext_resource path="res://assets/characters/Charlie_Sprite.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/StaminaBar.gd" type="Script" id=2]
+[ext_resource path="res://assets/themes/MainTheme.tres" type="Theme" id=3]
+[ext_resource path="res://assets/sounds/footstep.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/sounds/running.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/Interact.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/sounds/ItemGet.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/sounds/Save.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/Key.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds/Door.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/overlays/Darkness.png" type="Texture" id=11]
+[ext_resource path="res://assets/overlays/LightTest.png" type="Texture" id=12]
+[ext_resource path="res://assets/overlays/FrontLight.png" type="Texture" id=14]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 216, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 144, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 0, 72, 72 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 1 )
+region = Rect2( 72, 72, 72, 72 )
+
+[sub_resource type="SpriteFrames" id=53]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 2 ) ],
+"loop": true,
+"name": "Walk_Left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 5 ) ],
+"loop": true,
+"name": "Walk_Right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "Back_Turn_Front",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "Right_Turn_Front",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "Spin_CounterClockWise",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 17 ) ],
+"loop": true,
+"name": "Walk_Back",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "Back_Turn_Right",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 21 ) ],
+"loop": false,
+"name": "Idle_Front",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "Front_Turn_Left",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "Front_Turn_Right",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "Right_Turn_Back",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "Left_Turn_Right",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 31 ) ],
+"loop": false,
+"name": "Idle_Back",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 32 ) ],
+"loop": true,
+"name": "Idle_Right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 33 ), SubResource( 34 ) ],
+"loop": true,
+"name": "Left_Turn_Front",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 35 ), SubResource( 36 ) ],
+"loop": true,
+"name": "Back_Turn_Left",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 37 ), SubResource( 38 ) ],
+"loop": true,
+"name": "Left_Turn_Back",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 40 ) ],
+"loop": true,
+"name": "Walk_Front",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
+"loop": true,
+"name": "Spin_Clockwise",
+"speed": 12.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "_Hide",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "Front_Turn_Back",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 49 ) ],
+"loop": false,
+"name": "Idle_Left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ],
+"loop": true,
+"name": "Right_Turn_Left",
+"speed": 4.0
+} ]
+
+[sub_resource type="GDScript" id=54]
+script/source = "extends AnimatedSprite
+
+###########################################################################
+
+var destination = Vector2()
+var distance = Vector2()
+var velocity : Vector2 = Vector2()
+var direction = 0 				#0 = Back 	1 = Front	2 = Left	3 = Right
+
+var frameCount = 0
+var frameCount2 = 0
+
+var currentMap = -1
+
+var walkingplaying : bool = false
+var runningplaying : bool = false
+
+onready var FSP = $Footstep
+onready var RSP = $Running
+
+onready var StaminaB = $StaminaBar
+
+onready var HUD = get_node(\"/root/HUD\")
+
+var maxstamina
+var stamina
+
+var fear = 0
+var isHidden : bool = false
+
+var ink = 0
+
+export var speed = 350
+
+var path : PoolVector2Array
+
+onready var OST = $Music
+
+onready var currentSong = 0
+
+var songList = [\"res://assets/soundtrack/NeverLookBack.ogg\", \"res://assets/soundtrack/Juki.ogg\", \"res://assets/soundtrack/Shigoku.ogg\", \"res://assets/soundtrack/Gouma.ogg\"]
+
+###########################################################################
+
+func _ready():
+	destination = Vector2(position.x, position.y)
+	maxstamina = $StaminaBar.max_value
+	stamina = $StaminaBar.value
+
+
+enum{IDLE, MOVE}
+
+var state = IDLE
+
+func _process(delta):
+	var move_distance = speed * delta
+	
+	match state:
+		IDLE:
+			pass
+		MOVE:
+			move_along_path(move_distance)
+			
+	runCycle(delta)
+	pass
+
+func move_along_path(mdistance):
+	footSteps()
+	var starting_point : = position 
+	
+	if(path[0].x < starting_point.x ):
+		direction = 2
+		change_state(MOVE)
+	elif(path[0].x > starting_point.x ):
+		direction = 3
+		change_state(MOVE)
+	elif(path[0].x - starting_point.x <= 30 and path[0].y < starting_point.y):
+		direction = 1
+		change_state(MOVE)
+	elif(path[0].x - starting_point.x <= 30 and path[0].y >= starting_point.y):
+		direction = 0
+		change_state(MOVE)
+	
+	for _i in range(path.size()): #Por algum motivo, o código não funciona sem o laço \"for\"
+		var distance_to_next : = starting_point.distance_to(path[0])
+		
+		if (mdistance <= distance_to_next and distance_to_next != 0):
+			position = starting_point.linear_interpolate(path[0], mdistance / distance_to_next) 
+			break
+		
+		path.remove(0)
+		
+		if(path.size() == 0):
+			change_state(IDLE)
+			footSteps()
+	pass
+
+func change_state(newState):
+	state = newState
+	match state:
+		IDLE:
+			$StaminaBar.regen = true
+			$StaminaBar.regenPlus = true
+			if(direction == 0 and isHidden == false):
+				self.play(\"Idle_Back\")
+			elif(direction == 1 and isHidden == false):
+				self.play(\"Idle_Front\")
+			elif(direction == 2 and isHidden == false):
+				self.play(\"Idle_Left\")
+			elif(direction == 3 and isHidden == false):
+				self.play(\"Idle_Right\")
+		MOVE:
+			$StaminaBar.regenPlus = false
+			if(direction == 0 and isHidden == false):
+				self.play(\"Walk_Back\")
+			elif(direction == 1 and isHidden == false):
+				self.play(\"Walk_Front\")
+			elif(direction == 2 and isHidden == false):
+				self.play(\"Walk_Left\")
+			elif(direction == 3 and isHidden == false):
+				self.play(\"Walk_Right\")
+
+	pass
+
+func get_state():
+	return self.state
+
+func runCycle(_delta):
+	if (Input.is_action_pressed(\"run\") and self.state == MOVE and $StaminaBar.value >= 1 and isHidden == false):
+		$StaminaBar.regen = false
+		
+		if($StaminaBar.value >= 1):
+			$StaminaBar.regen = false
+			$StaminaBar.regenPlus = false
+			speed = 700
+			self.speed_scale = 2
+			$StaminaBar.value -= 0.3
+	
+	elif(Input.is_action_pressed(\"run\") and $StaminaBar.value < 1 and self.state == MOVE):
+		runningplaying = false
+		$StaminaBar.regen = false
+		speed = 350
+		self.speed_scale = 1
+	
+	elif (Input.is_action_pressed(\"run\") and self.state != MOVE):
+		runningplaying = false
+		$StaminaBar.regen = true
+		speed = 350
+		self.speed_scale = 1
+	
+	elif (Input.is_action_just_released(\"run\")):
+		runningplaying = false
+		$StaminaBar.regen = true
+		speed = 350
+		self.speed_scale = 1
+	
+	elif(self.state == MOVE and !Input.is_action_pressed(\"run\")):
+		$StaminaBar.regen = true
+		speed = 350
+		self.speed_scale = 1
+	
+	elif(self.state == IDLE):
+		$StaminaBar.regen = true
+		speed = 350
+		self.speed_scale = 1
+
+func hidePlayer():
+	#destination = position;
+	$StaminaBar.hide()
+	self.z_index = -10
+	HUD.sairShow()
+	self.play(\"_Hide\")
+	self.isHidden = true
+	doorPlay()
+	self.play(\"_Hide\")
+	self.hide()
+	pass
+
+func unhidePlayer():
+	self.show()
+	self.z_index = 2
+	self.play(\"Idle_Front\")
+	$StaminaBar.show()
+	HUD.sairHide()
+	self.isHidden = false
+	doorPlay()
+
+func footSteps():
+	if(get_state() == MOVE):
+		if(speed == 700):
+			if(runningplaying == false):
+				RSP.play()
+				FSP.stop()
+				runningplaying = true
+				walkingplaying = false
+		else:
+			if(walkingplaying == false):
+				RSP.stop()
+				FSP.play()
+				runningplaying = false
+				walkingplaying = true
+	elif(get_state() == IDLE):
+		RSP.stop()
+		FSP.stop()
+		walkingplaying = false
+		runningplaying = false
+			
+func interact():
+	$Interact.play()
+
+func itemGetPlay():
+	$ItemGet.play()
+
+func keyPlay():
+	$Key.play()
+	
+func savePlay():
+	$Save.play()
+
+func doorPlay():
+	$Door.play()
+
+func song(music : int):
+	if(currentSong != music):
+		OST.stop()
+		OST.stream = load(songList[music])
+		OST.play()
+	else:
+		pass
+
+func songStop():
+	currentSong = -1
+	OST.stop()
+
+func footStepOnce():
+	$Footstep.play()
+"
+
+[node name="Player" type="AnimatedSprite"]
+position = Vector2( 987.781, 757.551 )
+scale = Vector2( 8.47158, 8.47158 )
+frames = SubResource( 53 )
+animation = "Idle_Front"
+offset = Vector2( -1.41571, -26.9892 )
+script = SubResource( 54 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2.43171, -36.8671 )
+z_index = 8
+zoom = Vector2( 0.8, 0.8 )
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+smoothing_enabled = true
+smoothing_speed = 8.0
+drag_margin_left = 0.15
+drag_margin_top = 0.21
+drag_margin_right = 0.21
+drag_margin_bottom = 0.42
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+anchor_left = 0.315812
+anchor_top = 0.111
+anchor_right = 0.711
+anchor_bottom = 0.146
+margin_left = -37.7736
+margin_top = -62.992
+margin_right = 47.7729
+margin_bottom = -55.512
+rect_scale = Vector2( 0.25, 0.25 )
+mouse_filter = 2
+theme = ExtResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+value = 100.0
+percent_visible = false
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Footstep" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0.172379, 1.03873 )
+stream = ExtResource( 4 )
+volume_db = 24.0
+
+[node name="Running" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0.172379, 1.03873 )
+stream = ExtResource( 5 )
+volume_db = 24.0
+
+[node name="Interact" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="ItemGet" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Key" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Save" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="Door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="Darkness" type="Light2D" parent="."]
+position = Vector2( -20.2609, -44.0646 )
+scale = Vector2( 0.844566, 0.727536 )
+texture = ExtResource( 11 )
+mode = 3
+
+[node name="FrontLight" type="Light2D" parent="."]
+position = Vector2( -3.03949, -29.6359 )
+scale = Vector2( 0.139288, 0.139288 )
+texture = ExtResource( 14 )
+energy = 0.5
+
+[node name="LeftLight" type="Light2D" parent="."]
+visible = false
+position = Vector2( -89.3215, -21.9464 )
+scale = Vector2( -0.474381, 0.474381 )
+texture = ExtResource( 12 )
+
+[node name="RightLight" type="Light2D" parent="."]
+visible = false
+position = Vector2( 99.2703, -27.6991 )
+scale = Vector2( 0.474, 0.474 )
+texture = ExtResource( 12 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hizumi.ogg-dc29b710bb9c7eeee849f0e6548d7efd.oggstr"
+
+[deps]
+
+source_file="res://assets/soundtrack/Hizumi.ogg"
+dest_files=[ "res://.import/Hizumi.ogg-dc29b710bb9c7eeee849f0e6548d7efd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

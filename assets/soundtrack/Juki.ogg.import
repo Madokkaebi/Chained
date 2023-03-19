@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Juki.ogg-e92b8c542bb163b68744dbecedb0f478.oggstr"
+
+[deps]
+
+source_file="res://assets/soundtrack/Juki.ogg"
+dest_files=[ "res://.import/Juki.ogg-e92b8c542bb163b68744dbecedb0f478.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

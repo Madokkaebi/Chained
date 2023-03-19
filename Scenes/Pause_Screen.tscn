@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/themes/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/Pause_Screen.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Transition_Scene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/sounds/Button.ogg" type="AudioStream" id=4]
+
+[node name="Control" type="Sprite"]
+pause_mode = 2
+visible = false
+z_index = 10
+script = ExtResource( 2 )
+
+[node name="Overlay" type="ColorRect" parent="."]
+visible = false
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 1922.0
+margin_bottom = 1081.0
+color = Color( 0.192157, 0.180392, 0.180392, 0.639216 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition_Scene" parent="." instance=ExtResource( 3 )]
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Resume" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 840.819
+margin_top = 282.491
+margin_right = 987.819
+margin_bottom = 335.491
+rect_scale = Vector2( 2, 2 )
+theme = ExtResource( 1 )
+text = "Resume Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 840.819
+margin_top = 420.595
+margin_right = 987.819
+margin_bottom = 473.595
+rect_scale = Vector2( 2, 2 )
+theme = ExtResource( 1 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reload" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 840.819
+margin_top = 561.874
+margin_right = 987.819
+margin_bottom = 614.874
+rect_scale = Vector2( 2, 2 )
+theme = ExtResource( 1 )
+text = "Reload save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="Button" parent="CanvasLayer"]
+visible = false
+margin_left = 840.819
+margin_top = 699.977
+margin_right = 987.819
+margin_bottom = 752.977
+rect_scale = Vector2( 2, 2 )
+theme = ExtResource( 1 )
+text = "Return to menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume2" type="TextureButton" parent="CanvasLayer"]
+visible = false
+margin_right = 243.0
+margin_bottom = 235.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="transitioned" from="Transition_Scene" to="." method="_on_Transition_Scene_transitioned"]
+[connection signal="pressed" from="CanvasLayer/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Reload" to="." method="_on_Reload_pressed"]
+[connection signal="pressed" from="CanvasLayer/Return" to="." method="_on_Return_pressed"]
+[connection signal="pressed" from="CanvasLayer/Resume2" to="." method="_on_Resume2_pressed"]
